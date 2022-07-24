@@ -26,7 +26,7 @@ export default function Home({ launches }) {
           {
             launches.map( launch => {
               return (
-                <a key={launch.id} href={launch.links.video_link} className={styles.card} target="_blank">
+                <a key={launch.id} href={launch.links.video_link} className={styles.card} target="_blank" rel="noopener noreferrer">
                 <h3>{ launch.mission_name}</h3>
                 <p><strong>Launch Time: </strong>{new Date(launch.launch_date_local).toLocaleDateString("es-AR")}</p>
                 <br/>
